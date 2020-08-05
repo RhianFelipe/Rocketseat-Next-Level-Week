@@ -1,0 +1,279 @@
+#study-page #container {
+ width: 100vw;
+ height: 100vh;
+
+}
+.page-header{
+    background: var(--color-primary);
+   
+    display: flex;
+    flex-direction: column;
+}
+
+    .page-header  .top-bar-container {
+        width: 90%;
+        margin: 0 auto;
+
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.6rem 0;
+    }
+    .page-header .top-bar-container a{
+         height: 3.2rem;
+         transition: opacity  0.2s;
+    }
+    .page-header .top-bar-container a:hover{
+          opacity: 0.6;
+    }
+
+    .page-header .top-bar-container img {
+        height: 1.6rem ;
+    }
+    .page-header .header-content {
+        width: 90%;
+        margin: 3.2rem auto;
+
+        position: relative;
+    }
+
+    .page-header .header-content strong{
+        font: 700  3.6rem  Archivo;
+        line-height: 4.2rem ;   /*Altura do texto*/
+        color: var(--color-title-in-primary);
+        
+
+    }
+
+     #search-teacher{
+         margin-top: 3,2rem;
+     }
+
+     #search-teacher label{
+
+         color: var(--color-text-in-primary)
+     }
+
+     #search-teacher  .select-block{
+         margin-bottom: 1.4rem;
+     }
+
+     #search-teacher button{
+       width:100% ;
+       height: 5.6rem;
+       background:  var(--color-secondary);
+       color: var(--color-button-text);
+       border: 0;
+       border-radius: .8rem;
+       cursor: pointer; /*Faz a malzinha quando coloca  o mouse encima do botão*/
+       font: 700 1.6rem  Archivo;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-decoration: none;
+       transition: background 0.2s;
+       margin-top: 3.2rem;
+
+     }
+
+     #search-teacher button:hover{
+
+        background-color:  var(--color-secondary-dark);
+     }
+
+       .select-block label,
+       .input-block label{
+           font-size: 1.4rem;
+           color: var(--color-text-complement);
+       }
+
+       .input-block input,
+       .select-block select{
+           width: 100%;
+           height: 5.6rem;
+           margin-top: 0.8rem;
+           border-radius:0.8rem ;
+           background-color: var(--color-input-background);
+           border: 1px solid var(--color-line-in-white);
+           outline: 0; /*Para  tirar a bordinha preta*/
+           padding: 0 1.6rem; /*Colocar um mini retoque,um preenchimento*/
+           font: 1.6rem Archivo
+
+       }
+         /*Acessibilidade*/
+          .input-block{
+              position: relative;
+          }
+
+
+       .input-block:focus-within::after{ /* Peseudo codigo,se eu clicar com o mouse no item,ou ele estiver em foco(ira faze ro comando)sempre temq ter o content*/
+      content: "";
+      width: calc(100% - 3.2rem);
+      height: 2px;
+      background-color: var(--color-primary-light);
+      position: absolute ;
+      left: 1.6rem;
+       right:1.6rem;
+       bottom: 0;
+       }
+
+       #study-page main{
+           margin: 3.2rem auto;
+           width: 90%;
+       }
+
+
+    .teacher-item{
+        background-color: var(--color-box-base);
+        border: 1px solid var(--color-line-in-white);
+        border-radius: .8rem;
+        margin-top: 2.4rem;
+    }
+
+    .teacher-item header{ 
+        padding: 3.2rem 2rem;
+        display: flex; /*Coloca o nome do lado da imagem*/
+        align-items: center;
+
+    }
+
+    .teacher-item header img{ /*Para fazer a imagem virar uma  bolinha*/
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+    }
+
+    .teacher-item  header div{
+         margin-left: 2.4rem;
+    }
+
+    .teacher-item header div strong {
+        font: 700 2.4rem  Archivo ;
+        display: block; /*Faz ocupar toda linha,deixando alguns elementos para a linha de baixo*/
+        color: var(--color-text-tittle);
+    }
+    .teacher-item header div span{
+         font-size: 1.6rem;
+         display: block; 
+         margin-top: .4rem; /*Se for block inline,ele não faz a alteração*/
+    }
+
+    .teacher-item > p{
+        padding: 0 2rem;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+    }
+
+    .teacher-item footer{ /*linha de cima,para divisão*/
+        padding: 3.2rem 2rem;  
+            background-color: var(--color-box-footer);
+            border-top: 1px solid  var(--color-line-in-white) ;
+
+            display: flex; /*Para deixa alinhado,coloca do lado*/
+            align-items: center; /*Para deixar centrado*/
+            justify-content: space-between; /*Para deixa no canto de cada lado*/
+    }
+    .teacher-item footer p{
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        color: var(--color-text-complement);
+
+    }
+    .teacher-item footer p strong{
+        font-size: 1.6rem;
+        color: var(--color-primary);
+        display: block; /*Arrumando quebra de linha em mobile*/
+
+    }
+
+    .teacher-item footer button{
+        width: 20rem;
+        height: 5.6rem;
+        background-color: var(--color-secondary);
+        color: var(--color-button-text);
+        border: 0;
+        border-radius: .8rem;
+        cursor: pointer;
+        font: 700 1.4rem Archivo;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          text-decoration: none;
+
+          transition: background 0.2s;
+          margin-left: 1.6rem;
+    }
+
+    .teacher-item footer button:houver{
+        background-color: var(--color-secondary-dark);
+    }
+   /*Para Desktop*/
+    @media(min-width:700px){
+        #study-page #container {
+            max-width: 100vw;
+        }
+
+        .page-header {
+            height: 340px;
+        }
+        .page-header .top-bar-container{
+            max-width:1100px ;
+        }
+
+        .page-header .header-content{
+            max-width: 740px; 
+
+            margin: 0 auto;
+            /*Garantindo que um irá ficar embaixo do outro*/
+            flex: 1 1;
+            padding-bottom: 48px;
+            display: flex; 
+            flex-direction: column;
+            justify-content: center;
+
+
+
+        }
+          .page-header .header-content strong{
+              max-width: 350px;
+          }
+     
+        .teacher-item header,
+        .teacher-item footer{
+            padding: 32px;
+        }
+        #search-teacher{
+            display: grid;
+            grid-template-columns: repeat(4,1fr); /*Para repitir os frmes do grid*/
+            gap:16px;
+            position: absolute; /*Ele foca absoluto com a pagina toda,ou seja,fica encima das outras iamgens e escrita da pag*/
+              bottom: -28px ;
+        }
+          #study-page main{
+              padding: 32px 0;
+              max-width: 740px;
+              margin: 0 auto;
+          }
+          #search-teacher  .select-block{
+              margin-bottom: 0 ;
+              
+          }
+          .teacher-item > p{
+              padding: 0 32px;
+          }
+          .teacher-item footer p strong{
+              display: initial;
+              margin-left: 16px;
+          }
+          .teacher-item footer button{
+              width: 245px;
+              font-size: 16px;
+              justify-content: center;
+          }
+          .teacher-item footer button img{
+                    margin-right: 16px ;
+          }
+    }
