@@ -1,18 +1,20 @@
+:root{
+    font-size: 40%;
+}
 
-
-#container {
+#landing-page {
 
     background: var(--color-primary);
 }
 
 
-#landing-page, #container{
+#landing-page  #container{
 
     color: var(--color-text-in-primary);
 }
 
 .logo-container img{
-      height: 10rem;
+      height: 5rem;
       
 }
 .logo-container{
@@ -109,31 +111,31 @@ width: 100%;
          column-gap: 87px ;
          row-gap: 86px;
     }
-}
-
-.logo-container{
-    grid-area:proffy;
+    
+ .logo-container{
+    grid-area: proffy;
     text-align: initial;
     align-self: center;
     margin: 0;
-}
+ }
 
-.logo-container img{
+  .logo-container img{
     height: 127px ;
-}
+ }
 
-.hero-image{
+  .hero-image{
     grid-area:image;
     height: 350px;
-}
+ }
 
-.buttons-container {
+  .buttons-container {
     grid-area:button;
     justify-content: flex-start;
     margin: 0;
-}
+ }
 
-.total-connections{
+  .total-connections{
     grid-area: texting;
     font-size: 1.2rem;
+  }
 }
