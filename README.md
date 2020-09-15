@@ -1,4 +1,4 @@
-# Rocketseat-Next-Level-Week ☕
+# Rocketseat-Next-Level-Week  ☕
 ### Rocketseat weekly event to learn Web Development with Javascript, HTML and CSS.
 
 ## My learning 💻
